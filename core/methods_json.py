@@ -31,6 +31,8 @@ def bypass_method_1_json(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -71,6 +73,8 @@ def bypass_method_2_json(url:str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -110,6 +114,8 @@ def bypass_method_3_json(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -141,6 +147,8 @@ def bypass_method_4_json_get(url:str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -171,6 +179,8 @@ def bypass_method_4_json_put(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 

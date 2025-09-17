@@ -25,6 +25,8 @@ def bypass_method_1_urlencoded(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -60,6 +62,8 @@ def bypass_method_2_urlencoded(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
     except r.exceptions.HTTPError as e:
@@ -98,6 +102,8 @@ def bypass_method_3_urlencoded(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -130,6 +136,8 @@ def bypass_method_4_urlencoded_get(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
@@ -161,6 +169,8 @@ def bypass_method_4_urlencoded_put(url: str, req: str, token = None):
                     return 1
                 else:
                     return 0
+            else:
+                return 1
         else:
             return 0
 
