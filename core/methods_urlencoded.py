@@ -125,7 +125,10 @@ def bypass_method_4_urlencoded_get(url: str, req: str, token = None):
         token = find_token(req)
     form_data = list_to_dict(req)
     response = r.post(url, form_data, headers)
-    del headers["Content-Type"]
+    for k in list(headers.keys()):
+        if k.lower() == "content-type":
+            del headers[k]
+            break
 
     print("Trying method 4.1..")
     try:

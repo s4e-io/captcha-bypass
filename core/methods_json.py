@@ -137,7 +137,10 @@ def bypass_method_4_json_get(url:str, req: str, token = None):
         token = find_token_json(req)
     form_data = params_to_json(req)
     response = r.post(url, form_data, headers)
-    del headers["Content-Type"]
+    for k in list(headers.keys()):
+        if k.lower() == "content-type":
+            del headers[k]
+            break
     print("Trying method 4.1..")
     try:
         new_response = r.get(url, params=form_data, headers=headers)
