@@ -9,6 +9,8 @@ def bypass_method_1_get(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
     print("Trying method 1..")
@@ -46,6 +48,8 @@ def bypass_method_2_get(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
     print("Trying method 2..")
@@ -82,6 +86,8 @@ def bypass_method_3_get(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
 
@@ -123,6 +129,8 @@ def bypass_method_4_post(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
 
@@ -156,6 +164,8 @@ def bypass_method_4_put(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
 

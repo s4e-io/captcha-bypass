@@ -9,6 +9,8 @@ def bypass_method_1_urlencoded(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.post(url, form_data, headers)
     print("Trying method 1..")
@@ -46,6 +48,8 @@ def bypass_method_2_urlencoded(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.post(url, form_data, headers)
     print("Trying method 2..")
@@ -82,6 +86,8 @@ def bypass_method_3_urlencoded(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.post(url, form_data, headers)
 
@@ -123,6 +129,8 @@ def bypass_method_4_urlencoded_get(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.post(url, form_data, headers)
     for k in list(headers.keys()):
@@ -160,6 +168,8 @@ def bypass_method_4_urlencoded_put(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token(req)
+        if not token:
+            return 0
     form_data = list_to_dict(req)
     response = r.post(url, form_data, headers)
 

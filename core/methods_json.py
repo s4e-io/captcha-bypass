@@ -11,6 +11,8 @@ def bypass_method_1_json(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token_json(req)
+        if not token:
+            return 0
 
     print("Trying method 1..")
     try:
@@ -52,6 +54,8 @@ def bypass_method_2_json(url:str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token_json(req)
+        if not token:
+            return 0
     form_data = params_to_json(req)
     response = r.post(url, form_data, headers)
     print("Trying method 2..")
@@ -94,6 +98,8 @@ def bypass_method_3_json(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token_json(req)
+        if not token:
+            return 0
     form_data = params_to_json(req)
     response = r.post(url, form_data, headers)
 
@@ -135,6 +141,8 @@ def bypass_method_4_json_get(url:str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token_json(req)
+        if not token:
+            return 0
     form_data = params_to_json(req)
     response = r.post(url, form_data, headers)
     for k in list(headers.keys()):
@@ -171,6 +179,8 @@ def bypass_method_4_json_put(url: str, req: str, token = None):
     args = get_arguments()
     if token == None:
         token = find_token_json(req)
+        if not token:
+            return 0
     form_data = params_to_json(req)
     response = r.post(url, form_data, headers)
     print("Trying method 4.2..")
