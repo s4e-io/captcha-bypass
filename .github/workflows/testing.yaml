@@ -14,4 +14,3 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: token ${{ secrets.GH_ACCESS_TOKEN }}" \
             -d '{"event_type": "captcha-bypass-update", "client_payload": {"branch": "testing"}}'
-
