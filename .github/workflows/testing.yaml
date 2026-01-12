@@ -15,5 +15,3 @@ jobs:
             -H "Authorization: token ${{ secrets.GH_ACCESS_TOKEN }}" \
             -d '{"event_type": "captcha-bypass-update", "client_payload": {"branch": "testing"}}'
 
-
-
