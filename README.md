@@ -44,3 +44,5 @@ username=admin&password=test&captcha=TOKEN
 ```
 
 > **Note:** The tool automatically detects the captcha parameter from common names like `captcha`, `g-recaptcha-response`, `verification_code`, etc. Use `-t` flag only if your captcha parameter has a custom name.
+
+
